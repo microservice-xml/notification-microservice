@@ -1,0 +1,31 @@
+{
+  "name": "notification-microservice",
+  "version": "1.0.0",
+  "description": "Notification",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/config/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microservice-xml/notification-microservice.git"
+  },
+  "keywords": [
+    "Notification"
+  ],
+  "author": "NK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/microservice-xml/notification-microservice/issues"
+  },
+  "homepage": "https://github.com/microservice-xml/notification-microservice#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "mongoose": "^7.2.2",
+    "moongose": "^1.0.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.22"
+  }
+}

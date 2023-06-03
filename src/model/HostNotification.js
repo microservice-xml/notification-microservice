@@ -8,8 +8,8 @@ const hostNotificationSchema = mongoose.Schema({
   newRateAcc: { type: Boolean, default: true },
   isHighlighted: { type: Boolean, required: true },
   isSeen: { type: Boolean, default: false },
-  userId: { type: Boolean, required: true },
-  dateTime: { type: Boolean, required: true },
+  userId: { type: Number, required: true },
+  dateTime: { type: String, required: true },
 });
 
 module.exports = mongoose.model(

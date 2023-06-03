@@ -3,8 +3,8 @@ const app = express();
 const mongoose = require("mongoose");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
-const hostNotificationRoutes = require("./routes/host-routes");
-const guestNotificationRoutes = require("./routes/guest-routes");
+const configRoutes = require("./routes/config-routes");
+const notificationRoutes = require("./routes/notification-routes");
 
 mongoose.connect(
   "mongodb+srv://gravarica:mongodb123@xws-cluster.3wfy8qe.mongodb.net/NotificationDb?retryWrites=true&w=majority"
@@ -28,7 +28,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/host-notification", hostNotificationRoutes);
-app.use("/guest-notification", guestNotificationRoutes);
+app.use("/config", configRoutes);
+app.use("/notification", notificationRoutes);
 
 module.exports = app;

@@ -1,5 +1,10 @@
 const { default: mongoose } = require("mongoose");
 const Notification = require("../model/Notification");
+const io = require("socket.io")(9088, {
+  cors: {
+    origin: "http://localhost:3000",
+  },
+});
 
 const findAllByUserId = async (id) => {
   return await Notification.find({ userId: id });
@@ -11,6 +16,8 @@ const create = async (params) => {
     dateTime: new Date(),
     message: params.message,
   });
+
+  io.emit("notifications", params.userId);
   return await notification.save();
 };
 

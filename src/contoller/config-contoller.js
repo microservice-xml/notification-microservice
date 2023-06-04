@@ -2,11 +2,11 @@ const configService = require("../service/config-service");
 
 const createHostConfig = async (req, res) => {
   const cfg = await configService.createHostConfig(req.body.userId);
-  res.status(200).json(cfg);
+  res.status(201).json(cfg);
 };
 const createGuestConfig = async (req, res) => {
   const cfg = await configService.createGuestConfig(req.body.userId);
-  res.status(200).json(cfg);
+  res.status(201).json(cfg);
 };
 const updateHostConfig = async (req, res) => {
   const cfg = await configService.updateHostConfig(req.body);

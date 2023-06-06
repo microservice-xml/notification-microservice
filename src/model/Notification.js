@@ -6,6 +6,7 @@ const NotificationSchema = mongoose.Schema({
   userId: { type: Number, required: true },
   dateTime: { type: String, required: true },
   message: { type: String, required: true },
+  type: { type: String, required: true },
 });
 
 module.exports = mongoose.model(
